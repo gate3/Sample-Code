@@ -9,8 +9,6 @@ import {PvFooterModule, PvHeaderModule} from './shared';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { DeviceDetectorModule } from 'ngx-device-detector';
-import {SlimLoadingBarModule, SlimLoadingBarService} from 'ng2-slim-loading-bar';
 import { EventService } from './services';
 import { HttpModule } from '@angular/http';
 
@@ -25,12 +23,10 @@ import { HttpModule } from '@angular/http';
     PvFooterModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    DeviceDetectorModule.forRoot(),
-    SlimLoadingBarModule.forRoot(),
     BrowserAnimationsModule,
     HttpModule
   ],
-  providers: [SlimLoadingBarService, EventService],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
