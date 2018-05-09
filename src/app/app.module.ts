@@ -3,13 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {AppRoutingModule} from './app-routing.module'
-
-import {PvFooterModule, PvHeaderModule} from './shared';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { EventService } from './services';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -18,15 +14,11 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    PvHeaderModule,
-    PvFooterModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     HttpModule
   ],
-  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
