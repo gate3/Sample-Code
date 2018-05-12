@@ -43,9 +43,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#remove environment files
-/src/environments/*
-
 #git push bash files
 /git_push.desktop
 /git_push
