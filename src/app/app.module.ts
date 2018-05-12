@@ -8,13 +8,21 @@ import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HttpModule } from '@angular/http';
 
+const temp = {
+  apiKey: "AIzaSyCd6yiRhCIITnykk--bfA3mwuaBqJAqcYk",
+  authDomain: "pvc-location-finder.firebaseapp.com",
+  databaseURL: "https://pvc-location-finder.firebaseio.com",
+  projectId: "pvc-location-finder",
+  messagingSenderId: "366030178333"
+}
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(temp),
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     HttpModule
