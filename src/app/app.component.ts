@@ -3,7 +3,6 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import * as GeoFire from "geofire";
 import { FirebaseApp } from 'angularfire2';
 import * as firebase from 'firebase'
-import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
